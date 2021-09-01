@@ -1,27 +1,18 @@
-let usersFirstNumber = prompt(`введіть перше число`);
-let usersSecondNumber = prompt(`введіть друге число`);
+let firstNumber = Math.trunc(prompt(`введіть перше число`));
+let secondNumber = Math.trunc(prompt(`введіть друге число`));
 
-let firstNumber = (Math.trunc(usersFirstNumber));
-let secondNumber = (Math.trunc(usersSecondNumber));
-
-while (isNaN(usersFirstNumber) || isNaN(usersSecondNumber)) {
+while (isNaN(firstNumber) || isNaN(secondNumber)) {
     alert (`Некоректне введення. Спробуйте ще раз`);    
-    let usersFirstNumber = prompt(`введіть перше число`);
-    let usersSecondNumber = prompt(`введіть друге число`);
-    
-    let firstNumber = (Math.trunc(usersFirstNumber));
-    let secondNumber = (Math.trunc(usersSecondNumber));
+    firstNumber = Math.trunc(prompt(`введіть перше число`));
+    secondNumber = Math.trunc(prompt(`введіть друге число`));
 };
 
-let skipEvenNumbers = confirm(`Пропускати парні числа?`);
+const skipEvenNumbers = confirm(`Пропускати парні числа?`);
 
-let biggerNumer;
-let smallerNumber;
+let biggerNumer = firstNumber;
+let smallerNumber = secondNumber;
 
-if (firstNumber > secondNumber) {
-    biggerNumer = firstNumber;
-    smallerNumber = secondNumber;
-} else {
+if (firstNumber < secondNumber) {
     biggerNumer = secondNumber;
     smallerNumber = firstNumber;
 };
